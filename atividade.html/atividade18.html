@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Reajuste Salarial</title>
+</head>
+<body>
+    <h1>Abra o Console (F12) para ver o resultado</h1>
+
+    <script>
+        
+        let cargo = "estagiario"; 
+        let salario = 2000;
+        
+        let percentualAumento = 0;
+
+        
+        switch(cargo) {
+            case "estagiario":
+                percentualAumento = 0.10; 
+                break;
+                
+            case "analista":
+                percentualAumento = 0.20; 
+                break;
+                
+            case "gerente":
+                percentualAumento = 0.30; 
+                break;
+                
+            default:
+                percentualAumento = 0;
+                console.log("Cargo não reconhecido.");
+        }
+
+        
+        if (percentualAumento > 0) {
+            let aumento = salario * percentualAumento;
+            let salarioFinal = salario + aumento;
+
+            console.log("=== REAJUSTE SALARIAL ===");
+            console.log("Cargo: " + cargo);
+            console.log("Salário Inicial: R$ " + salario);
+            console.log("Aumento Aplicado: " + (percentualAumento * 100) + "%");
+            console.log("Novo Salário: R$ " + salarioFinal);
+        }
+    </script>
+</body>
+</html>

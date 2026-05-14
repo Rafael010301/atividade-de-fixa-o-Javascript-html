@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CALCULADORA</h1>
+    <button onclick="realizarOperacao()">Fazer a operação !</button>
+    <p id="paragrafo"></p>
+    
+    <script>
+        
+        let numero1 = Number(prompt("Digite o número"));
+        let numero2 = Number(prompt("Digite o segundo número"));
+        let sinalOperacao = prompt("Escolha um sinal '+' '-' '*' '/'");
+        
+        const visorConta = document.getElementById("paragrafo");
+        
+        function realizarOperacao(){
+            switch (sinalOperacao){
+                case "+":
+                    let resultado1 = numero1 + numero2;
+                    visorConta.innerText = resultado1;
+                    break; 
+                case "-":
+                    let resultado2 = numero1 - numero2; 
+                    visorConta.innerText = resultado2;
+                    break; 
+                case "*":
+                    let resultado3 = numero1 * numero2;
+                    
+                    visorConta.innerText = resultado3; 
+                    break; 
+                case "/":
+                    let resultado4 = numero1 / numero2;
+                    
+                    visorConta.innerText = resultado4;
+                    break; 
+                default:
+                    visorConta.innerText = "Operação inválida!";
+            }
+        }
+    </script>
+</body>
+</html>

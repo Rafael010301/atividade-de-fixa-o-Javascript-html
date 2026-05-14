@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CALCULADORA</h1>
+    <p id="paragrafo">resultado</p>
+    <button onclick="somarValores()">Somar !</button>
+    
+    <script>
+        let primeiroValor = Number(prompt("Digite o 1° número")); 
+        let segundoValor = Number(prompt("Agora o segundo")); 
+        function somarValores(){ 
+            let resultado = primeiroValor + segundoValor;
+            const paragrafo = document.getElementById("paragrafo");
+            paragrafo.textContent = resultado;
+        }
+    </script>
+</body>
+</html>
